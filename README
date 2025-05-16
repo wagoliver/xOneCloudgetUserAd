@@ -1,0 +1,38 @@
+# ==================================================
+# Atualizador de Departamentos - xOne Cloud
+# =================================================
+# Este script realiza atualização em massa de departamentos
+# via API do xOne Cloud usando como base o arquivo departamento.json.
+#
+# Entrada esperada:
+# Um arquivo chamado `departamento.json` com estrutura como:
+# [
+#   {
+#     "jobTitle": "Gerente de Operação de TI",
+#     "department": "Gerente de Tecnologia",
+#     "employeeId": "alemita",
+#     "employeeType": "alemita",
+#     "mail": "alexandre.mita@arctica.com.br",
+#     "manager": "Wagner Augusto Pires de Oliveira",
+#     "manager_mail": "wagner.augusto@arctica.com.br"
+#   },
+#   ...
+# ]
+#
+# Esse conteúdo será transformado em:
+# {
+#   "lang": "pt-BR",
+#   "departments": [
+#     {
+#       "name": "Gerente de Tecnologia",
+#       "manager": "Wagner Augusto Pires de Oliveira",
+#       "manager_email": "wagner.augusto@arctica.com.br",
+#       "workingday_name": "Jornada de trabalho Padrão",
+#       "user_name": "alemita"
+#     }
+#   ]
+# }
+#
+# Pré-requisitos: jq e curl instalados.
+# Para rodar no Windows, utilize Git Bash ou WSL.
+# ======================================
